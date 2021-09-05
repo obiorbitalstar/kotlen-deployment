@@ -49,7 +49,7 @@ pipeline {
             }
             steps {
                 container('helm') {
-                    sh "helm install ${NAME}./helm"
+                    sh "helm install ${NAME} ./helm"
                 }
             }
         }
