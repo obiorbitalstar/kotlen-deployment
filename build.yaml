@@ -33,4 +33,4 @@ spec:
         path: /var/run/docker.sock
     - name: m2
       hostPath:
-        path: /var/.m2
+        path: /var/.m2git
