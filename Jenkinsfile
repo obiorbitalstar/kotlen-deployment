@@ -36,7 +36,6 @@ pipeline {
                 environment name: 'DEPLOY', value: 'true'
             }
             steps {
-                sh "./main.sh"
                 container('docker') {
                         sh "./main.sh"
                         sh "docker push ${REGISTRY}:${VERSION}"
