@@ -12,7 +12,7 @@ spec:
       tty: true
       volumeMounts:
         - name: m2
-          mountPath: /root/.m2
+          mountPath: /.m2
     - name: docker
       image: docker:19.03
       command:
@@ -33,4 +33,4 @@ spec:
         path: /var/run/docker.sock
     - name: m2
       hostPath:
-        path: /root/.m2
+        path: /.m2
