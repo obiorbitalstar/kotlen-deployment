@@ -6,6 +6,6 @@ touch mypass.txt
 
 echo $pass > mypass.txt
 
-cat mypass.txt | docker login --username obiorbitalstar --password-stdin
+cat mypass.txt | sudo docker login --username obiorbitalstar --password-stdin
 
 rm -rf mypass.txt

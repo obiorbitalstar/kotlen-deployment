@@ -31,18 +31,18 @@ pipeline {
                 }
             }
         }
-        stage('Docker Publish') {
-            when {
-                environment name: 'DEPLOY', value: 'true'
-            }
-            steps {
-                container('docker') {
-                        sh "./main.sh"
-                        sh "docker push ${REGISTRY}:${VERSION}"
+        // stage('Docker Publish') {
+        //     when {
+        //         environment name: 'DEPLOY', value: 'true'
+        //     }
+        //     steps {
+        //         container('docker') {
+        //                 sh "./main.sh"
+        //                 sh "docker push ${REGISTRY}:${VERSION}"
                     
-                }
-            }
-        }
+        //         }
+        //     }
+        // }
         stage('Kubernetes Deploy') {
             when {
                 environment name: 'DEPLOY', value: 'true'
