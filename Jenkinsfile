@@ -49,7 +49,7 @@ pipeline {
             }
             steps {
                 container('helm') {
-                    sh "helm upgrade --install --force --set name=${NAME} --set image.tag=${VERSION} --set domain=${DOMAIN} ${NAME} ./helm"
+                    sh "helm upgrade --install --force --set name=potato2 --set image.tag=2 --set domain=localhost example ./helm"
                 }
             }
         }
